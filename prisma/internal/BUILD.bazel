@@ -1,7 +1,7 @@
-load("@build_bazel_rules_nodejs//:index.bzl", "nodejs_binary")
+load("@aspect_rules_js//js:defs.bzl", "js_binary")
 
 # This binary (prisma_wrapper.js) wraps prisma in a bazel
-nodejs_binary(
+js_binary(
     name = "prisma_wrapper",
     data = [
         "@npm//@prisma/client",
